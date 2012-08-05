@@ -22,4 +22,10 @@ DEBUG = False
 SECRET_KEY = 'Not actually secret'
 
 #: The name of the cookie used to store user sessions.
-SESSION_COOKIE_NAME = 'myapp_session'
+SESSION_COOKIE_NAME = 'sakulaci_session'
+
+FACEBOOK_APP_ID = '134935269915211'
+FACEBOOK_APP_SECRET = '80fac2462eeddb763ff9db71bc248f47'
+
+TWITTER_CONSUMER_KEY = 'oa6PsRmm8MY8VGGqyf9ZRg'
+TWITTER_CONSUMER_SECRET = '9x33ePsyH3O2cgKO5tW1QkjupXCOZCw56JW2XKw6bog'

@@ -1,3 +1,5 @@
 Flask>=0.8
 Flask-Script
 Flask-MongoKit
+Flask-OAuth
+Flask-Mail

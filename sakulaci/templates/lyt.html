@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>KasKas - {{ title }}</title>
+    <meta charset="utf-8">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Kas Kas</h1>
+        </header>
+        
+        <nav>
+		<ol>
+			<li><a href="/">Home</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/signup">Sign Up</a></li>
+			<li><a href="/login/facebook">Login Facebook</a></li>
+			<li><a href="/login/twitter">Login Twitter</a></li>
+		</ol>
+        </nav>
+        
+        {% with flashes = get_flashed_messages(with_categories=True) -%}
+        {% if flashes -%}
+        <div id="flashes">
+        {%- for category, message in flashes %}
+            <p class="flash flash-{{category}}">
+                {{ message }}
+            </p>
+        {%- endfor %}
+        </div>
+        {%- endif %}
+        {%- endwith %}
+        
+        <div id="content">
+            {% block body %}{% endblock body %}
+        </div>        
+        
+        <footer>
+            <a href="http://flask.pocoo.org/">
+                <img src="http://flask.pocoo.org/static/badges/powered-by-flask-s.png"
+                    border="0" alt="powered by Flask" title="powered by Flask">
+            </a>
+        </footer>
+    </div>
+</body>
