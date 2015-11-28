@@ -8,7 +8,7 @@ This is the main entry point for your app. It contains the app factory.
 :license:   MIT/X11, see LICENSE for details
 """
 from flask import Flask, url_for, request, session, redirect
-from flaskext.oauth import OAuth
+from flask.ext.oauth import OAuth
 from .views import BLUEPRINTS
 
 def create_app(config=None, extras=None):
@@ -107,4 +107,5 @@ def create_app(config=None, extras=None):
         session.pop('outh_token', None)
         return redirect('/')
 
+    app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
     return app

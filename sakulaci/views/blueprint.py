@@ -14,4 +14,18 @@ blueprint = Blueprint('blueprint', __name__)
 
 @blueprint.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.jade")
+
+@blueprint.route('/about')
+def about():
+    return render_template("about.jade")
+
+
+@blueprint.route('/tos')
+def tos():
+    return render_template("tos.jade")
+
+
+@blueprint.route('/privacy')
+def privacy():
+    return render_template("privacy.jade")

@@ -1,5 +1,5 @@
 from flask import current_app
-from flaskext.script import Manager
+from flask.ext.script import Manager
 from .application import create_app
 
 manager = Manager(create_app)

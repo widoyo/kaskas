@@ -12,7 +12,7 @@ the header, and you can use it as a config file.)
 #: Whether to run the application in debug mode or not. (Most of the time,
 #: this should be `False`. Running this with `True` in production is a HUGE
 #: security loophole.)
-DEBUG = False
+DEBUG = True
 
 #: The secret key used to sign sessions. You can generate one with the command
 #: ``python -c "import os; print(repr(os.urandom(20)))"``. Note that if you
